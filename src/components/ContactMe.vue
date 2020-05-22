@@ -115,3 +115,21 @@
     </footer>
     </div>
 </template>
+
+<style scoped>
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth
+}
+
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+.container{
+    max-height: fit-content !important;
+    max-width: 700px !important;
+}
+</style>

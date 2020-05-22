@@ -1,5 +1,5 @@
-<template>
-    <div class="bg-dark">
+<template class="bg-dark">
+    <div class="bg-dar">
 
          <section class="nav-section">
 
@@ -79,8 +79,68 @@
 </template>
 
 <style scoped>
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth
+}
+*,
+*::after,
+*::before{
+    /* margin: 0; */
+    padding: 0;
+    box-sizing: inherit;
+}
+a,a::after,
+a::before, a:link{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
 .bg-dark{
+    /* background-color: black !important; */
+    /* height: 110vh !important; */
+}
+body{
     background-color: black !important;
-    height: 110vh !important;
+}
+
+.nav-link{
+    color: white !important;
+}
+.navbar-brand{
+    font-size: 20px !important;
+    font-weight: bolder !important;
+}
+.icon{
+    color: white !important;
+    background-color: white !important;
+}
+.nav-link:hover{
+    transition: 1s ;
+    border-bottom: 3px solid red;
+}
+.active-now{
+    color: rgb(15, 231, 15) !important;
+}
+.card-project{
+    border-left: 20px solid green !important;
+}
+small{
+    font-size: 20px !important;
+    font-weight: lighter !important;
+    color: rgba(0, 0, 0, 0.397);
+}
+
+footer{
+    font-size: 2vh;
+}
+
+.resume{
+    color: red !important;
 }
 </style>
