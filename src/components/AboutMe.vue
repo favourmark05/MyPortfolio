@@ -1,45 +1,35 @@
 <template>
     <div>
-        <header id="header">
-    <div class="about-welcome-sect">
-      <section class="nav-section">
-
-        <nav class="navbar navbar-expand-lg navbar-light ">
-          <div class="container">
-            <a class="navbar-brand text-white" href="index.html">MFONIDO MARK</a>
-            <button class="navbar-toggler icon" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <!-- <a class="nav-link" href="project.html">Projects <span class="sr-only">(current)</span></a> -->
-                    <router-link to="/MyProjects" class="nav-link">Projects<span class="sr-only">(current)</span></router-link>
-                </li>
-                <li class="nav-item">
-                  <!-- <a class="nav-link" href="contact.html">Contact</a> -->
-                    <router-link to="/ContactMe" class="nav-link">Contact</router-link>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active-now resume" href="/assets/Resume.pdf">Resume</a>
-              </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </section>
-      <h1 class="text-center pro">Profile</h1>
-    </div>
-  </header>
-  <div class="container text-center pt-5">
+  <div class="welcome-sect">
+  <nav class="navbar navbar-expand-lg navbar-dark px-5 pt-2">
+      <router-link to="/HomePage"><li class="navbar-brand text-white" >MFONIDO-MARK</li></router-link>
+      <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <router-link to="/ContactMe"><a class="nav-link" >Contact <span class="sr-only">(current)</span></a></router-link>
+      </li>
+      <li class="nav-item active">
+        <router-link to="/MyProjects"><a class="nav-link">Projects</a></router-link>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link resume" href="assets/Resume.pdf">Resume</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<h1 class="pro">Profile</h1>
+</div>
+  <div class="container text-center pt-2 px-5">
     <div class="card mb-3 shadow" style="max-width: fit-content; max-height: fit-content;">
       <div class="row no-gutters">
-        <div class="col-md-4">
+        <div class="col-xl-6">
           <img src="/assets/about.jpg" class="card-img" alt="..." style="height: 100%;">
         </div>
-        <div class="col-md-8">
-          <div class="card-body">
+        <div class="col-xl-6">
+          <div class="card-body px-4 py-4">
             <h3 class="card-title">About me</h3>
             <p class="card-text " id="card-text">Hello, i'm Mfonido Friday Mark.<br> I design thoughtful digital experiences &
               beautiful brand aesthetics. I provide high quality web design, graphics services, digital marketing and
@@ -65,7 +55,7 @@
     </div>
   </div>
 
-  <div class="container mx-auto py-5">
+  <div class="container col-xl-12 py-5 pl-5 pr-3">
     <div class="col-md-10 ">
       <table class="table">
         <thead>
@@ -103,14 +93,14 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 .pro{
     color: white;
     font-size: 15vh;
-    padding-top: 20vh;
+    padding-top: 5vh;
     padding-bottom: 30vh;
     text-align: center;
-    /* font-family: 'Pacifico', cursive !important; */
+    font-family: 'Pacifico', cursive !important;
 }
 /* Global stylings */
 html{
@@ -237,7 +227,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-    height: 100vh;
+    height: 50vh;
     /* clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%) */
 }
 
@@ -284,7 +274,7 @@ body{
     background-repeat: no-repeat;
     background-position: top;
     height: 100vh;
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%)
+    /* clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%) */
 }
 .about-welcome-sect > h1{
     color: white;

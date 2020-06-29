@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="body">
 <header id="header">
         <div class="container-fluid welcome-sect">
             <div class="row welcome-text-box">
@@ -65,10 +65,9 @@ export default {
     }
   }
 }
-</script>
+</script >
 
-<style >
-/* Global stylings */
+<style scoped>
 html{
     box-sizing: border-box;
     font-size: 62.5%;
@@ -81,36 +80,10 @@ html{
     padding: 0;
     box-sizing: inherit;
 }
-a,a::after,
+/* a,a::after, */
 a::before, a:link{
     text-decoration: none;
     color: white;
-}
-
-a:hover{
-    text-decoration: none;
-    color: white;
-}
-.Mark {
-    text-decoration: none !important;
-    color: white !important;
-    font-size: 30px !important;
-    font-weight: bolder !important;
-}
-
-body{
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.7;
-    color: #777;
-    overflow-x: hidden;
-    position: relative;
-}
-.navbar, .nav-link{
-    color: #fff;
-    font-weight: 400;
-    font-size: 18px;
 }
 .navbar{
     transition: background-color 1s;
@@ -126,7 +99,7 @@ body{
 
 /* Overlay Navigation styling here */
 .overlay {
-    height: 100%;
+    height: 100vh;
     width: 0;
     position: fixed;
     z-index: 1;
@@ -137,7 +110,6 @@ body{
     overflow-x: hidden;
     transition: 0.5s;
   }
-
   .overlay-content {
     position: relative;
     top: 25%;
@@ -145,7 +117,6 @@ body{
     text-align: center;
     margin-top: 30px;
   }
-
   .overlay a {
     padding: 8px;
     text-decoration: none;
@@ -154,18 +125,15 @@ body{
     display: block;
     transition: 0.3s;
   }
-
   .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
   }
-
   .overlay .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
   }
-
   @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
@@ -174,22 +142,13 @@ body{
     right: 35px;
     }
   }
-
-.dark {
-    color: white !important;
-    background-color: rgba(159, 243, 156, 0.568) !important;
-    transition: background-color 1s;
-    /*padding-top: 20px;*/
-}
-
-/* Index stylings */
-.welcome-sect{
+  .welcome-sect{
     background-image:linear-gradient(
         to right bottom,
          hsl(120, 1%, 26%),
-        rgba(96, 97, 97, 0.432) ),
-    url(/assets/home.JPG);
-    /* background: url(../images/home.JPG); */
+          rgba(96, 97, 97, 0.432) ),
+    url('/assets/home.JPG');
+    /* background-image: url(/assests/index.JPG); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -229,118 +188,4 @@ body{
     font-size: 40px;
 }
 
-/* this is the styling for the about page */
-.about-welcome-sect{
-    background-image:linear-gradient(
-        to right bottom,
-         hsl(120, 1%, 26%),
-          rgba(96, 97, 97, 0.432) ),
-    url('/assets/home.JPG');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    height: 100vh;
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%)
-}
-.about-welcome-sect > h1{
-    color: white;
-    font-size: 15vh;
-    padding-top: 20vh;
-    padding-bottom: 30vh;
-    text-align: center;
-    font-family: 'Pacifico', cursive !important;
-}
-.container > h5{
-    color: white;
-    font-size: 9vh;
-    padding-top: 10vh;
-    padding-bottom: 5vh;
-    text-align: center;
-    font-family: 'Pacifico', cursive !important;
-}
-/* .buttons{
-    position: absolute;
-    margin-top: -30vh;
-} */
-.card{
-    border: none !important;
-}
-.card-title{
-    font-size: 40px !important;
-    text-decoration: underline;
-    text-decoration-color: red;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bolder;
-}
-#card-text {
-    font-size: 20px !important;
-    /* text-align: start !important; */
-    font-family: monospace;
-}
-.about-info > p {
-    font-size: 20px;
-    text-align: start !important;
-}
-.title-s {
-    font-weight: bolder;
-}
-.skill-mf > p{
-    font-size: 30px !important;
-}
-.skill-mf > span {
-    font-size: 20px;
-}
-.title-ss{
-    font-weight: bolder;
-    text-decoration-line: underline;
-    text-decoration-color: red;
-}
-.skill-mf > span {
-    font-weight: bolder !important;
-}
-.fa{
-    color: white !important;
-    font-size: 25px !important;
-}
-td{
-    font-size: 2.5vh;
-}
-th{
-    font-size: 3vh;
-}
-
-/* this is the styling for the project page */
-
-.nav-link{
-    color: white !important;
-}
-.navbar-brand{
-    font-size: 20px !important;
-    font-weight: bolder !important;
-}
-.icon{
-    color: white !important;
-    background-color: white !important;
-}
-.nav-link:hover{
-    transition: 1s ;
-    border-bottom: 3px solid red;
-}
-.active-now{
-    color: rgb(15, 231, 15) !important;
-}
-.card-project{
-    border-left: 20px solid green !important;
-}
-small{
-    font-size: 20px !important;
-    font-weight: lighter !important;
-    color: rgba(0, 0, 0, 0.397);
-}
-footer{
-    font-size: 2vh;
-}
-.resume{
-    color: red !important;
-}
 </style>

@@ -1,41 +1,30 @@
 <template>
-    <div>
-        <header id="header " class="about-welcome-sect">
-        <!-- <div class="col">
-            <a href="index.html" class="navbar-brand float-left Mark pl-5 pt-5">MFONIDO MARK</a>
-        </div> -->
-        <section class="nav-section">
-
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <div class="container">
-                    <a class="navbar-brand text-white" href="index.html">MFONIDO MARK</a>
-                    <button class="navbar-toggler icon" type="button" data-toggle="collapse"
-                        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <router-link to="/MyProjects" class="nav-link">Projects<span class="sr-only">(current)</span></router-link>
-                            </li>
-                            <li class="nav-item">
-                                <router-link to="/ContactMe" class="nav-link active-now">Contact</router-link>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active-now resume" href="/assets/Resume.pdf">Resume</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </section>
-
-        <div class="container" style="max-width: 700px; max-height: fit-content;">
-            <h5 class="text-center ">Get-in-touch</h5>
-            <div class="row card shadow">
-                <div class="col py-5">
-                    <form action="POST" data-netlify="true">
+    <div id="header " class="about-welcome-sect">
+    <div >
+        <!-- the navbar begins here -->
+        <nav class="navbar navbar-expand-lg navbar-dark px-4">
+                <router-link to="/HomePage"><li class="navbar-brand text-white" >MFONIDO-MARK</li></router-link>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-2">
+                            <router-link to="/AboutMe" class="nav-link" >About <span class="sr-only">(current)</span></router-link>
+                        </li>
+                        <li class="nav-item active px-2">
+                            <router-link to="/MyProjects" class="nav-link">Projects<span class="sr-only">(current)</span></router-link>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link resume" href="assets/Resume.pdf">Resume</a>
+                        </li>
+                    </ul>
+            </div>
+        </nav>
+        <!-- navbar ends here -->
+        <h1 class="text-center text-white pt-4">GET-IN-TOUCH</h1>
+<div>
+                    <form action="POST" data-netlify="true" class="text-white">
                         <div class="form-group">
                             <label for="formGroupExampleInput">NAME</label>
                             <input type="text" class="form-control" placeholder="" name="name" required>
@@ -51,12 +40,13 @@
                         </div>
                         <button type="submit" value="send message" class="btn btn-primary">Submit</button>
                     </form>
-                </div>
-            </div>
-            <div class="container py-5 text-center">
-                <div class="row">
-                    <div class="col">
-                        <a title="LinkedIn" href="https://www.linkedin.com/in/mfonido-mark-4baa42120/" target="_blank">
+
+                    <!-- social links -->
+
+</div>
+<div class="social-links px-4">
+    <div class="my-3">
+        <a title="LinkedIn" href="https://www.linkedin.com/in/mfonido-mark-4baa42120/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
                                 viewBox="0 0 172 172" style=" fill:#000000; opacity: .9;">
                                 <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
@@ -75,9 +65,9 @@
                                 </g>
                             </svg>
                         </a>
-                    </div>
-                    <div class="col">
-                        <a title="Twitter" href="https://twitter.com/MfonidoMark" target="_blank">
+    </div>
+    <div class="my-3">
+        <a title="Twitter" href="https://twitter.com/MfonidoMark" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
                                 viewBox="0 0 172 172" style=" fill:#000000; opacity: .9;">
                                 <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
@@ -99,37 +89,82 @@
                                 </g>
                             </svg>
                         </a>
-                    </div>
-                    <div class="col">
-                        <a title="GitHub" href="https://github.com/favourmark05" target="_blank">
+    </div >
+    <div class="py-3">
+        <a title="GitHub" href="https://github.com/favourmark05" target="_blank">
                             <i class="fa fa-github" aria-hidden="true"></i>
                         </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    </div>
+</div>
+    </div>
 
-    <footer>
+    <!-- <footer>
         <div class="col text-center bg-dark text-white"> © 2020 Copyright: Mfonido Mark</div>
-    </footer>
+    </footer> -->
     </div>
 </template>
 
 <style scoped>
+.nav-link:hover{
+    transition: 1s ;
+    border-bottom: 3px solid red;
+}
+.fa-github{
+    color: white;
+    font-size: 30px;
+}
 html{
     box-sizing: border-box;
     font-size: 62.5%;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+
 }
 
 *::before{
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    overflow: hidden;
 }
-.container{
+.about-welcome-sect{
+    background-image:linear-gradient(
+        to right bottom,
+         hsl(120, 1%, 26%),
+          rgba(96, 97, 97, 0.432) ),
+    url('/assets/home.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height:115vh;
+    /* clip-path: polygon(0 0, 100% 0, 100% 98vh, 0 100%) */
+}
+@media screen and (max-height: 600px){
+    .about-welcome-sect{
+        height: 135vh;
+    }
+}
+
+  form{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    /* border: 5px solid #ccc; */
+    /* border-radius: 20px; */
+    /* box-shadow: 0 5px 5px #aaa; */
+    margin: 10px;
+    /* align-content: center; */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    /* padding: 30px; */
+  }
+  .social-links{
+      display: grid;
+      grid-template-rows: auto auto auto;
+  }
+
+/* .container{
     max-height: fit-content !important;
     max-width: 700px !important;
-}
+} */
 </style>
